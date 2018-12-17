@@ -14,7 +14,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { Camera } from '@ionic-native/camera/ngx';
 
-export function createTranslateLoader(http: HttpClient) {
+export function setTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 
@@ -34,7 +34,7 @@ import {IonicStorageModule} from '@ionic/storage';
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
-                useFactory: (createTranslateLoader),
+                useFactory: (setTranslateLoader),
                 deps: [HttpClient]
             }
         })
