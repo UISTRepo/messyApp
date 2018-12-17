@@ -1,5 +1,7 @@
 {
   "name": "messyThings",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
