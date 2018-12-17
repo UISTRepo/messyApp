@@ -12,7 +12,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-import { IonicStorageModule } from '@ionic/storage';
+import { Camera } from '@ionic-native/camera/ngx';
 
 export function createTranslateLoader(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,7 +43,8 @@ import {IonicStorageModule} from '@ionic/storage';
         StatusBar,
         SplashScreen,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-        Globalization
+        Globalization,
+        Camera
     ],
     bootstrap: [AppComponent]
 })

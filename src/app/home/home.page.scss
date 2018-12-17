@@ -1,1 +1,11 @@
-
+.theGallery{
+  img{
+    width: 25%;
+    float: left;
+    padding: 3px;
+    -webkit-border-radius: 5px;
+    border: 1px solid #eee;
+    object-fit: cover;
+    height: 90px;
+  }
+}

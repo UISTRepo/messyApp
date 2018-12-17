@@ -24,6 +24,20 @@
 
     </ion-list>
 
+    <div class="theGallery">
+        <ion-item>
+            <ion-label><strong>Image Gallery</strong></ion-label>
+        </ion-item>
+        <ion-card color="light" *ngIf="gallery.length == 0">
+            <ion-card-content  text-center>
+                No images in your gallery.
+                <div>
+                    Take your first picture
+                </div>
+            </ion-card-content>
+        </ion-card>
+        <img [src]="item" *ngFor="let item of gallery">
+    </div>
+    <ion-button size="full" (click)="takePicture()">{{'takePicBtn' | translate}}</ion-button>
+
 </ion-content>
-
-
